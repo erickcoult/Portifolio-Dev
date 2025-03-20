@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@graphcms/rich-text-react-renderer": "0.6.1",
+    "@graphcms/rich-text-react-renderer": "^0.6.1",
     "@hookform/resolvers": "3.0.1",
     "@rocketseat/eslint-config": "1.2.0",
     "@types/node": "18.15.11",

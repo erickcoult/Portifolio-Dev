@@ -1,0 +1,22 @@
+hook
+ = ()  => {}
+ shadow-2xl rounded-lg object-cover
+Hook Form e Zod
+Type
+4xl
+flex flex-col ´´pq dois flex
+flex-1
+export default function
+relative
+pq tem horas que é <div><div/> e horas que é apenas <div/>
+[&>h3]
+key={section.title}
+console.log(data)
+useCallback
+explicar tudo sobre o fetch-hygraph-query.ts
+diferença de export const e export type
+oq é graphcms
+arrow function
+async
+promise
+SEO estático e dinamico
