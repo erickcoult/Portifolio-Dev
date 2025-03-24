@@ -20,3 +20,6 @@ arrow function
 async
 promise
 SEO estático e dinamico
+...props
+tipagem
+'use client'
