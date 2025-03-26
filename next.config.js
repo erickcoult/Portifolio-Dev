@@ -5,11 +5,11 @@ const nextConfig = {
   },
   images: {
     domains: [
-      "media.graphassets.com",
-      "cdn-affmn.nitrocdn.com",
-      "us-west-2.graphassets.com",
+      'media.graphassets.com',
+      'cdn-affmn.nitrocdn.com',
+      'us-west-2.graphassets.com',
     ],
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

@@ -1,11 +1,10 @@
-import { PageIntroduction } from "../components/pages/projetos/pages-introduction";
-import { ProjectsList } from "../components/pages/projetos/projects-list";
-import { ProjectsPageData } from "../types/page-info";
-import { fetchHygraphQuery } from "../utils/fetch-hygraph-query";
+import { PageIntroduction } from '../components/pages/projetos/pages-introduction'
+import { ProjectsList } from '../components/pages/projetos/projects-list'
+import { ProjectsPageData } from '../types/page-info'
+import { fetchHygraphQuery } from '../utils/fetch-hygraph-query'
 
-export const metadata ={
-
-  title: 'Projetos'
+export const metadata = {
+  title: 'Projetos',
 }
 
 const getPageData = async (): Promise<ProjectsPageData> => {
@@ -23,20 +22,20 @@ const getPageData = async (): Promise<ProjectsPageData> => {
         }
       }
     }
-   `;
+   `
 
   return fetchHygraphQuery(
-    query
+    query,
     // 0 Após a conclusão, inserir 60 * 60 * 24
-  );
-};
+  )
+}
 
 export default async function Projects() {
-  const { projects } = await getPageData();
+  const { projects } = await getPageData()
   return (
     <>
       <PageIntroduction />
       <ProjectsList projects={projects} />
     </>
-  );
+  )
 }

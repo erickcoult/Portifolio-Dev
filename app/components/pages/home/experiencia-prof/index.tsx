@@ -1,10 +1,10 @@
-import { SectionTitle } from "@/app/components/section-title";
-import { ExperienceItem } from "./experience-item";
-import { WorkExperience as IWorkExperience } from "@/app/types/work-experience";
+import { SectionTitle } from '@/app/components/section-title'
+import { ExperienceItem } from './experience-item'
+import { WorkExperience as IWorkExperience } from '@/app/types/work-experience'
 
 type WorkExperienceProps = {
-  experiences: IWorkExperience[];
-};
+  experiences: IWorkExperience[]
+}
 
 export const WorkExperience = ({ experiences }: WorkExperienceProps) => {
   return (
@@ -15,7 +15,7 @@ export const WorkExperience = ({ experiences }: WorkExperienceProps) => {
           title="Experiência Profissional"
         ></SectionTitle>
         <p className="text-gray-400 mt-6">
-          {" "}
+          {' '}
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           dolor beatae fugiat corrupti, consectetur architecto autem eum
           aperiam, quasi perspiciatis saepe fuga veritatis dicta. Beatae sunt ea
@@ -32,5 +32,5 @@ export const WorkExperience = ({ experiences }: WorkExperienceProps) => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}

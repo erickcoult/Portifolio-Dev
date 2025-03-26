@@ -1,13 +1,13 @@
 'use client'
 
-import { ProjectSection } from "@/app/types/projects";
-import Image from "next/image";
-import {motion } from 'framer-motion'
-import { fadeUpAnimation } from "@/app/lib/animation";
+import { ProjectSection } from '@/app/types/projects'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { fadeUpAnimation } from '@/app/lib/animation'
 
 type ProjectSectionsProps = {
-  sections: ProjectSection[];
-};
+  sections: ProjectSection[]
+}
 
 export const ProjectSections = ({ sections }: ProjectSectionsProps) => {
   return (
@@ -17,7 +17,7 @@ export const ProjectSections = ({ sections }: ProjectSectionsProps) => {
           key={section.title}
           className="flex flex-col items-center gap-6 md:gap-12"
           {...fadeUpAnimation}
-          transition={{duration:0.5}}
+          transition={{ duration: 0.5 }}
         >
           <h2 className="text-2xl md:text-3xl text-gray-300">
             {section.title}
@@ -33,5 +33,5 @@ export const ProjectSections = ({ sections }: ProjectSectionsProps) => {
         </motion.div>
       ))}
     </section>
-  );
-};
+  )
+}

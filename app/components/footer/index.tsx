@@ -1,4 +1,4 @@
-import { IoMdHeart } from "react-icons/io";
+import { IoMdHeart } from 'react-icons/io'
 
 export const Footer = () => {
   return (
@@ -8,5 +8,5 @@ export const Footer = () => {
         <strong className="font-medium">Erick Coutinho</strong>
       </span>
     </footer>
-  );
-};
+  )
+}

@@ -1,11 +1,11 @@
-import { WorkExperience } from "./components/pages/home/experiencia-prof";
-import { HeroSection } from "./components/pages/home/hero-section";
-import { KnownTechs } from "./components/pages/home/know-techs";
-import { ProjetoDestaque } from "./components/pages/home/projeto-destaque";
-import { HomePageData } from "./types/page-info";
-import { fetchHygraphQuery } from "./utils/fetch-hygraph-query";
+import { WorkExperience } from './components/pages/home/experiencia-prof'
+import { HeroSection } from './components/pages/home/hero-section'
+import { KnownTechs } from './components/pages/home/know-techs'
+import { ProjetoDestaque } from './components/pages/home/projeto-destaque'
+import { HomePageData } from './types/page-info'
+import { fetchHygraphQuery } from './utils/fetch-hygraph-query'
 
-export const metadata ={
+export const metadata = {
   title: 'Home',
 }
 
@@ -60,16 +60,16 @@ const getPageData = async (): Promise<HomePageData> => {
       }
     }
 }
-  `;
+  `
 
   return fetchHygraphQuery(
     query,
-    0 //Após a conclusão,  inserir 60 * 60 * 24  isso vai dizer que o cache será guardado por 24h, ou seja, caso houver alguma atualização no conteúdo, apenas daqui 24h aparecerá no client.
-  );
-};
+    0, // Após a conclusão,  inserir 60 * 60 * 24  isso vai dizer que o cache será guardado por 24h, ou seja, caso houver alguma atualização no conteúdo, apenas daqui 24h aparecerá no client.
+  )
+}
 
 export default async function Home() {
-  const { page: pageData, workExperiences } = await getPageData();
+  const { page: pageData, workExperiences } = await getPageData()
 
   return (
     <>
@@ -78,5 +78,5 @@ export default async function Home() {
       <ProjetoDestaque projects={pageData.highlightProjects}></ProjetoDestaque>
       <WorkExperience experiences={workExperiences} />
     </>
-  );
+  )
 }
