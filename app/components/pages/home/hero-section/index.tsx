@@ -33,7 +33,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
           exit={{ opacity: 0, y: 100 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-mono text-emerald-400">Olá, meu nome é</p>
+          <p className="font-mono text-[#267FFF]">Olá, meu nome é</p>
           <h2 className="text-4xl font-medium mt-2">Erick Coutinho</h2>
 
           <div className="text-gray-400 my-6 text-sm sm:text-base">

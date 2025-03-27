@@ -32,7 +32,7 @@ export const BackToTop = () => {
         >
           <Button
             onClick={scrollToTop}
-            className="shadow-lg shadow-emerald-400/20"
+            className="shadow-lg shadow-[rgba(38,127,255,0.2)]"
           >
             <TbArrowNarrowUp size={20} />
           </Button>

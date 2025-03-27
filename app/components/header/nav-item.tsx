@@ -19,7 +19,7 @@ export const NavItem = ({ label, href }: NavItemProps) => {
         'text-gray-400 flex items-center gap-2 font-medium font-mono',
       )}
     >
-      <span className="text-emerald-400">#{label}</span>
+      <span className="text-[#267FFF] hover:text-[#3399ff]">#{label}</span>
     </Link>
   )
 }

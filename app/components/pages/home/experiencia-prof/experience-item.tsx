@@ -71,7 +71,7 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
           <a
             href={companyUrl}
             target="_blank"
-            className="text-gray-500 hover:text-emerald-500 transition-colors"
+            className="text-gray-500 hover:text-[#3399ff] transition-colors"
             rel="noreferrer"
           >
             @ {companyName}

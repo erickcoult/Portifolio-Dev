@@ -57,18 +57,18 @@ export const ContactForm = () => {
         >
           <input
             placeholder="Nome"
-            className="w-full h-14 bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-emerald-600"
+            className="w-full h-14 bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-[#0059E0]"
             {...register('name')}
           />
           <input
             placeholder="E-mail"
             type="email"
-            className="w-full h-14 bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-emerald-600"
+            className="w-full h-14 bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-[#0059E0]"
             {...register('email')}
           />
           <textarea
             placeholder="Mensagem"
-            className="resize-none w-full h-[138px] bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-emerald-600"
+            className="resize-none w-full h-[138px] bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-[#0059E0]"
             {...register('message')}
             maxLength={500}
           />
@@ -78,7 +78,7 @@ export const ContactForm = () => {
               Enviar mensagem
               <HiArrowNarrowRight size={18} />
             </Button>
-            <div className="absolute inset-0 bg-emerald-600 blur-2xl opacity-20" />
+            <div className="absolute inset-0 bg-[#0059E0] blur-2xl opacity-20" />
           </div>
         </motion.form>
       </div>
