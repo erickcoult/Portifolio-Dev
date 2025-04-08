@@ -16,7 +16,10 @@ export const WorkExperience = ({ experiences }: WorkExperienceProps) => {
         ></SectionTitle>
         <p className="text-gray-400 mt-6">
           {' '}
-          Desenvolvedor júnior com formação em Análise e Desenvolvimento de Sistemas e experiência prática em projetos web utilizando Node.js, JavaScript, React e MongoDB. Desenvolvi soluções focadas em cadastro de usuários, consumo de APIs e sistemas responsivos. Tenho facilidade com aprendizado rápido, trabalho em equipe e gosto de criar soluções eficientes e bem estruturadas. Também possuo conhecimentos em WordPress, hospedagem de sites e deploys em Vercel.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          dolor beatae fugiat corrupti, consectetur architecto autem eum
+          aperiam, quasi perspiciatis saepe fuga veritatis dicta. Beatae sunt ea
+          laborum? Perferendis, laudantium.
         </p>
       </div>
 
