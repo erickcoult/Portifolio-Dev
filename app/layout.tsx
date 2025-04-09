@@ -8,6 +8,8 @@ import { BackToTop } from './components/voltar-topo'
 import { Toaster } from './components/toaster'
 
 export const metadata = {
+  metadataBase: new URL ('https://www.erickcoutinhopf.com/'),
+
   title: {
     default: 'Home',
     template: '%s | EC DEV',
