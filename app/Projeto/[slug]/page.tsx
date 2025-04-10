@@ -80,7 +80,7 @@ export async function generateMetadata({
     openGraph: {
       images: [
         {
-          url: project.thumbnail.url,
+          url: project.thumbnail?.url,
           width: 1200,
           height: 630,
         },

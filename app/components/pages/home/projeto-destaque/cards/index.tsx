@@ -31,7 +31,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         <Image
           width={420}
           height={304}
-          src={project.thumbnail.url}
+          src={project.thumbnail?.url}
           alt={`Thumbnail do projeto ${project.title}`}
           className="w-full h-full object-cover rounded-lg"
         />

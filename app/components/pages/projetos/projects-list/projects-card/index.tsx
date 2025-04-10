@@ -14,7 +14,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         <Image
           width={380}
           height={200}
-          src={project.thumbnail.url}
+          src={project.thumbnail?.url}
           alt={`Thumbnail do projeto ${project.title}`}
           unoptimized
           className="w-full h-full object-cover group-hover:scale-110 duration-500 transition-all"

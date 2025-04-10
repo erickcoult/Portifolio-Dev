@@ -23,7 +23,7 @@ export const ProjectSections = ({ sections }: ProjectSectionsProps) => {
             {section.title}
           </h2>
           <Image
-            src={section.image.url}
+            src={section.image?.url}
             width={1080}
             height={672}
             className="w-full aspect-auto rounded-lg object-cover"

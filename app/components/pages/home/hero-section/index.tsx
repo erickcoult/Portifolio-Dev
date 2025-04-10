@@ -60,7 +60,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
             <div className="text-2xl text-gray-600 flex items-center h-20 gap-3">
               {homeInfo.socials.map((contact, index) => (
                 <a
-                  href={contact.url}
+                  href={contact?.url}
                   key={`contact-${index}`}
                   target="_blank"
                   className="hover:text-gray-100 transition-colors"
@@ -83,7 +83,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
           <Image
             width={420}
             height={404}
-            src={homeInfo.profilePicture.url}
+            src={homeInfo.profilePicture?.url}
             alt="Foto de Perfil do Erick"
             className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover"
           />
