@@ -21,7 +21,7 @@ export const WorkExperience = ({ experiences }: WorkExperienceProps) => {
           de usuários, consumo de APIs e sistemas responsivos. Tenho facilidade
           com aprendizado rápido, trabalho em equipe e gosto de criar soluções
           eficientes e bem estruturadas. Também possuo conhecimentos em
-          WordPress, hospedagem de sites e deploys em Vercel.
+          hospedagem de sites e deploys em Vercel.
         </p>
       </div>
 
