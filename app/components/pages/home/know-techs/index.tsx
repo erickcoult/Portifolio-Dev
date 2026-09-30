@@ -12,9 +12,9 @@ type KnownTechsProps = {
 export const KnownTechs = ({ techs }: KnownTechsProps) => {
   return (
     <section className="container py-16">
-      <SectionTitle subtitle="competência" title="Conhecimentos"></SectionTitle>
+      <SectionTitle subtitle="skills" title="Technical Skills"></SectionTitle>
 
-      <div className="grid grid-cols-sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-[60px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-[60px]">
         {techs?.map((tech, i) => (
           <motion.div
             key={tech.name}

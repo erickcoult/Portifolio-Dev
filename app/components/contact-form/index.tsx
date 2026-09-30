@@ -14,7 +14,7 @@ import { fadeUpAnimation } from '@/app/lib/animation'
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
   email: z.string().email(),
-  message: z.string().min(1).max(500),
+  message: z.string().min(1).max(1000),
 })
 
 type ContactFormData = z.infer<typeof contactFormSchema>
@@ -23,19 +23,24 @@ export const ContactForm = () => {
   const {
     handleSubmit,
     register,
+    watch,
     reset,
     formState: { isSubmitting },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
   })
 
+  const message = watch('message', '')
+
   const onSubmit = async (data: ContactFormData) => {
     try {
       await axios.post('/api/contact', data)
-      toast.success('Mensagem enviada com sucesso!')
+      toast.success('Message sent successfully!')
       reset()
     } catch (error) {
-      toast.error('Ocorreu um erro ao enviar a mensagem. Tente novamente.')
+      toast.error(
+        'Something went wrong while sending your message. Please try again.',
+      )
     }
   }
 
@@ -46,8 +51,8 @@ export const ContactForm = () => {
     >
       <div className="w-full max-w-[420px] mx-auto">
         <SectionTitle
-          subtitle="contato"
-          title="Entre em contato"
+          subtitle="contact"
+          title="Get in touch"
           className="items-center text-center"
         />
         <motion.form
@@ -56,7 +61,7 @@ export const ContactForm = () => {
           {...fadeUpAnimation}
         >
           <input
-            placeholder="Nome"
+            placeholder="Name"
             className="w-full h-14 bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-[#0059E0]"
             {...register('name')}
           />
@@ -66,16 +71,22 @@ export const ContactForm = () => {
             className="w-full h-14 bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-[#0059E0]"
             {...register('email')}
           />
-          <textarea
-            placeholder="Mensagem"
-            className="resize-none w-full h-[138px] bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 focus:outline-none focus:ring-2 ring-[#0059E0]"
-            {...register('message')}
-            maxLength={500}
-          />
+          <div className="relative w-full">
+            <textarea
+              placeholder="Message"
+              className="resize-none w-full h-[138px] bg-gray-800 rounded-lg placeholder:text-gray-400 text-gray-50 p-4 pb-8 focus:outline-none focus:ring-2 ring-[#0059E0]"
+              {...register('message')}
+              maxLength={1000}
+            />
+
+            <span className="absolute bottom-3 right-4 text-xs text-gray-500">
+              {message.length}/1000
+            </span>
+          </div>
 
           <div className="relative w-max mx-auto mt-6">
             <Button className="z-[2] relative" disabled={isSubmitting}>
-              Enviar mensagem
+              Send message
               <HiArrowNarrowRight size={18} />
             </Button>
             <div className="absolute inset-0 bg-[#0059E0] blur-2xl opacity-20" />

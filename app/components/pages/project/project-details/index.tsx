@@ -31,7 +31,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         />
 
         <SectionTitle
-          subtitle="projetos"
+          subtitle="projects"
           title={project.title}
           className="text-center items-center sm:[&>h3]:text-4xl"
         />
@@ -61,7 +61,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
             <a href={project.githubUrl} target="_blank" rel="noreferrer">
               <Button className="min-w-[180px]">
                 <TbBrandGithub size={20} />
-                Repositorio
+                Repository
               </Button>
             </a>
           )}
@@ -70,14 +70,14 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
             <a href={project.liveProjectUrl} target="_blank" rel="noreferrer">
               <Button className="min-w-[180px]">
                 <FiGlobe size={20} />
-                Projeto Online
+                Live Project
               </Button>
             </a>
           )}
         </motion.div>
-        <Link href={'/Projeto'}>
+        <Link href={'/projects'}>
           <HiArrowNarrowLeft size={20} />
-          Voltar para projetos
+          Back to projects
         </Link>
       </section>
     </>

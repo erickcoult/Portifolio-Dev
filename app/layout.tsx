@@ -4,14 +4,16 @@ import { ReactNode } from 'react'
 import { Header } from './components/header'
 import { ContactForm } from './components/contact-form'
 import { Footer } from './components/footer'
-import { BackToTop } from './components/voltar-topo'
+import { BackToTop } from './components/back-to-top'
 import { Toaster } from './components/toaster'
 
 export const metadata = {
   title: {
-    default: 'Home',
-    template: '%s | EC DEV',
+    default: 'Erick Coutinho | Software Developer',
+    template: '%s | Erick Coutinho',
   },
+  description:
+    'Junior software developer focused on web development with JavaScript, React, Node.js and MongoDB.',
   icons: [
     {
       url: '/favicon.svg', // favicon
@@ -32,7 +34,7 @@ const plexMono = IBM_Plex_Mono({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
+    <html lang="en-NZ" className={`${inter.variable} ${plexMono.variable}`}>
       <body>
         <Toaster />
         <Header></Header>

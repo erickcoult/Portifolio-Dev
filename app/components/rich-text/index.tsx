@@ -8,6 +8,8 @@ export const RichText = ({ ...props }: RichTextProps) => {
     <CMSRichText
       {...props}
       renderers={{
+        p: ({ children }) => <p className="mb-4">{children}</p>,
+
         bold: ({ children }) => (
           <b className="text-gray-50 font-medium">{children}</b>
         ),

@@ -45,6 +45,6 @@ export function getRelativeTimeString(
   const divisor = unitIndex ? cutoffs[unitIndex - 1] : 1
 
   // Intl.RelativeTimeFormat do its magic
-  const rtf = new Intl.RelativeTimeFormat(lang, { numeric: 'auto' })
+  const rtf = new Intl.RelativeTimeFormat(lang, { numeric: 'always' })
   return rtf.format(Math.floor(deltaSeconds / divisor), units[unitIndex])
 }

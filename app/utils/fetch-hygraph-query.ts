@@ -1,21 +1,56 @@
+import axios from 'axios'
+
+type HygraphResponse<T> = {
+  data?: T
+  errors?: {
+    message: string
+  }[]
+}
+
 export const fetchHygraphQuery = async <T>(
   query: string,
-  revalidate?: number,
+  _revalidate?: number,
 ): Promise<T> => {
-  const response = await fetch(process.env.HYGRAPH_URL!, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-      Authorization: `Bearer ${process.env.HYGRAPH_TOKEN}`,
-    },
-    body: JSON.stringify({ query }),
-    next: {
-      revalidate,
-    },
-  })
+  const url = process.env.HYGRAPH_URL
 
-  const { data } = await response.json()
+  if (!url) {
+    throw new Error('HYGRAPH_URL is not defined')
+  }
 
-  return data
+  try {
+    const response = await axios.post<HygraphResponse<T>>(
+      url,
+      {
+        query,
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+      },
+    )
+
+    if (response.data.errors?.length) {
+      throw new Error(
+        `Hygraph GraphQL error: ${response.data.errors
+          .map((error) => error.message)
+          .join(', ')}`,
+      )
+    }
+
+    if (!response.data.data) {
+      throw new Error('Hygraph returned no data')
+    }
+
+    return response.data.data
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      console.error('Hygraph request error:', error.message)
+      console.error('Status:', error.response?.status)
+      console.error('Response:', error.response?.data)
+    }
+
+    throw error
+  }
 }

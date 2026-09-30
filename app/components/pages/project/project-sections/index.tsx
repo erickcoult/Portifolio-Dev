@@ -27,7 +27,7 @@ export const ProjectSections = ({ sections }: ProjectSectionsProps) => {
             width={1080}
             height={672}
             className="w-full aspect-auto rounded-lg object-cover"
-            alt="{`Imagem da sessão {section.title}`}"
+            alt={`Screenshot of the ${section.title} section`}
             unoptimized
           />
         </motion.div>

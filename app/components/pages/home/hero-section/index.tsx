@@ -6,8 +6,7 @@ import { RichText } from '@/app/components/rich-text'
 import { TechBadge } from '@/app/components/tech-badge'
 import { HomePageInfo } from '@/app/types/page-info'
 import Image from 'next/image'
-import { use } from 'react'
-import { HiArrowNarrowRight, HiOutlineArrowNarrowRight } from 'react-icons/hi'
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 import { techBadgeAnimation } from '@/app/lib/animation'
 
@@ -33,7 +32,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
           exit={{ opacity: 0, y: 100 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-mono text-[#267FFF]">Olá, meu nome é</p>
+          <p className="font-mono text-[#267FFF]">Hi, my name is</p>
           <h2 className="text-4xl font-medium mt-2">Erick Coutinho</h2>
 
           <div className="text-gray-400 my-6 text-sm sm:text-base">
@@ -53,7 +52,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
 
           <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
             <Button className="w-max shadow-button" onClick={handleContact}>
-              Entre em Contato
+              Get in touch
               <HiOutlineArrowNarrowRight size={18} />
             </Button>
 
@@ -84,7 +83,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
             width={420}
             height={404}
             src={homeInfo.profilePicture?.url}
-            alt="Foto de Perfil do Erick"
+            alt="Portrait of Erick Coutinho"
             className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover"
           />
         </motion.div>

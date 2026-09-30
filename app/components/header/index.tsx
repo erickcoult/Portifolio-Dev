@@ -11,8 +11,8 @@ const NAV_ITEMS = [
     href: '/',
   },
   {
-    label: 'Projeto',
-    href: '/Projeto',
+    label: 'Projects',
+    href: '/projects',
   },
 ]
 
@@ -28,7 +28,7 @@ export const Header = () => {
         <Link href="/">
           <Image width={80} height={49} src="/images/faicon.svg" alt="Logo" />
         </Link>
-        <nav className="flex items- center gap-4 sm:gap-10">
+        <nav className="flex items-center gap-4 sm:gap-10">
           {NAV_ITEMS.map((item) => (
             <NavItem {...item} key={item.label}></NavItem>
           ))}
