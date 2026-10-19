@@ -5,7 +5,6 @@ type HygraphResponse<T> = {
   }[]
 }
 
-
 export const fetchHygraphQuery = async <T>(
   query: string,
   revalidate = 60,
@@ -48,8 +47,3 @@ export const fetchHygraphQuery = async <T>(
 
   return json.data
 }
-
-
-/**
-
- */
