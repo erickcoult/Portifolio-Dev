@@ -5,17 +5,7 @@ type HygraphResponse<T> = {
   }[]
 }
 
-/**
- * Runs a GraphQL query against Hygraph.
- *
- * `revalidate` (in seconds) tells Next.js how long it may reuse the result:
- * - 0  → fetch fresh data on every request (Hygraph edits show up immediately)
- * - 60 → reuse for up to 60s, then refresh in the background (default)
- *
- * It uses the native `fetch` on purpose: Next.js only applies `revalidate`
- * to `fetch`. With axios the value was ignored and the data stayed frozen
- * at whatever Hygraph returned during the last deploy.
- */
+
 export const fetchHygraphQuery = async <T>(
   query: string,
   revalidate = 60,
@@ -58,3 +48,8 @@ export const fetchHygraphQuery = async <T>(
 
   return json.data
 }
+
+
+/**
+
+ */
